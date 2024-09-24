@@ -18,6 +18,11 @@ function draw() {
   strokeWeight(1);
   rect(275,245,-150,20);
 
+  //left eye
+  fill("#000000");
+  strokeWeight(1);
+  rect(275,30,-100,20);
+
   
   
 

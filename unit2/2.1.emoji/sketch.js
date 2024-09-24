@@ -16,7 +16,7 @@ function draw() {
   //The mounth
   fill("#000000");
   strokeWeight(8);
-  line(400,300,-160,200);
+  line(400,300,-160,80);
 
   //Right eye
   fill("#000000");

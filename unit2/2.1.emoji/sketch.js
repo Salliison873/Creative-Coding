@@ -10,8 +10,9 @@ function draw() {
   //Body of the face
   background(220);
   fill("yellow");
-  circle(200,200,250);
   stroke("black");
+  circle(200,200,250);
+  
 
   
   

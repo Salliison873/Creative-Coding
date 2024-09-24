@@ -8,6 +8,7 @@ function setup() {
 
 function draw() {
   background(220);
+  fill("yellow");
   circle(200,200,250);
   
 

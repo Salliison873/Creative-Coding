@@ -16,7 +16,7 @@ function draw() {
   //The mounth
   fill("black");
   strokeweight(1);
-  ellpse(100,50,10,50);
+  ellipse(100,50,10,50);
   
   
   

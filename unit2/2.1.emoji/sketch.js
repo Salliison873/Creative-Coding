@@ -13,18 +13,7 @@ function draw() {
   circle(200,200,250);
   stroke("black");
 
-  //The mounth
-  fill("black");
-  strokeWeight(1);
-  rect(200.90.40,200);
-
-  //Left eye
-  strokeWeight(8);
-  line(160,150,110,180);
-
-  //Right eye
-  strokeWeight(8);
-  line(160,400,110,180)
+ 
   
   
   

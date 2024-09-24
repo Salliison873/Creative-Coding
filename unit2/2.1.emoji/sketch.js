@@ -21,12 +21,12 @@ function draw() {
   //Right eye
   fill("#000000");
   strokeWeight(1);
-  rect(225,120,60,20);
+  rect(225,140,60,20);
 
   //Left eye
   fill("#000000");
   strokeWeight(1);
-  rect(125,130,60,20);
+  rect(125,140,60,20);
 
 
   

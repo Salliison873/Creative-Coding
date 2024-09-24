@@ -8,9 +8,7 @@ function setup() {
 
 function draw() {
   background(220);
-  nostoke();
-  fill(250,200,250);
-  ellipse(width/2, height/2, 250); 
+  circle(200,200,100)
   
 
   rectMode(CENTER);

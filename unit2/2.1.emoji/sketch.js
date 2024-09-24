@@ -16,7 +16,7 @@ function draw() {
   //The mounth
   fill("#000000");
   strokeWeight(1);
-  rect(250,30,-150,100);
+  rect(300,30,-150,100);
 
   
   

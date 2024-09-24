@@ -12,6 +12,13 @@ function draw() {
   fill("yellow");
   stroke("black");
   circle(200,200,250);
+
+  //The mounth
+  fill("#000000");
+  strokeWeight(1);
+  rect(200,400,60,200);
+
+  
   
 
   

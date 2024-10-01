@@ -2,9 +2,11 @@ function setup() {
   // create a canvas
   // use https://p5js.org/reference/p5/random/ as a reference.
   createCanvas(1200, 1200);
+
   // disable animation
-  noloop();
+  noLoop();
 }
+
 function draw(){
 background('Black');
 translate(100,100);

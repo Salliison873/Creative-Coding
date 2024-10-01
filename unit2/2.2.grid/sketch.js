@@ -18,7 +18,7 @@ for (let x = 0; x < 8; x++){
       push();
       translate(x * 100, y * 100);
       fill('white');
-      rect(0,0,100,100);
+      rect(0,0,120,120);
       fill(RanColor);
       ellipse(50,50,100, 100);
 

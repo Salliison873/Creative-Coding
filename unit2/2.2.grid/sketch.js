@@ -2,11 +2,8 @@ function setup() {
   // create a canvas
   // use https://p5js.org/reference/p5/random/ as a reference.
   createCanvas(1200, 1200);
-
   // disable animation
 }
-
-
 function draw(){
 background('Black');
 translate(100,100);
@@ -21,7 +18,6 @@ for (let x = 0; x < 8; x++){
       fill(RanColor);
       ellipse(50,50,100, 100);
       pop();
-
      }
   }
 }

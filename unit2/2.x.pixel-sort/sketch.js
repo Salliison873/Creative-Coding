@@ -36,19 +36,6 @@ function draw() {
   rectMode(CENTER);
  
 }
-
-
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-
   rectMode(CENTER);
  
 }

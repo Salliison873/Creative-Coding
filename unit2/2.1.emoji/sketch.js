@@ -12,34 +12,34 @@ function draw() {
   fill("yellow");
   stroke("black");
   circle(200,200,250);
-
-  //The mounth
-  fill("#000000");
-  strokeWeight(20);
-  line(160,200,200,200);
-
-  //Right eye
-  fill("#000000");
-  strokeWeight(1);
-  rect(225,140,60,20);
-
-  //Left eye
-  fill("#000000");
-  strokeWeight(1);
-  rect(125,140,60,20);
-
-
   
+  //left Eye
+  fill("white");
+  stroke("black");
+  circle(150,150,90);
+  fill("black");
+  stroke("black");
+  circle(150,132,55);
   
-
+  // Right Eye
+  fill("white");
+  stroke("black");
+  circle(250,150,90);
+  fill("black");
+  stroke("black");
+  circle(250,132,55);
   
-  
-  
-  
-  
-  
-  
-
+  // Mouth
+  fill("black");
+  strokeWeight(25);
+  line(120,250,275,250);
   rectMode(CENTER);
  
 }
+
+  
+  
+  
+  
+  
+  

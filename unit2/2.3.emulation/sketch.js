@@ -10,8 +10,8 @@ function draw(){
 background('white');
 translate(100,100);
 colorMode(HSB, 100);
-for (let x = 0; x < 50; x+=1){
-   for (let y = 0; y < 50; y+=1){
+for (let x = 0; x < 30; x+=1){
+   for (let y = 0; y < 30; y+=1){
      push();
      translate(x * 100, y * 100);
      stroke('#00BCD4'); // the fill outline of the color

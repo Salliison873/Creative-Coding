@@ -1,3 +1,6 @@
+function setup() {
+  createCanvas(1200, 1200);
+}
 function draw(){
 background('white');
 translate(100,100);

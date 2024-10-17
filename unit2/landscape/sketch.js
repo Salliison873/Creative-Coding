@@ -1,4 +1,5 @@
 function preload(){
+  //Use p5.j as a reference.
   // load the image from a file
 	img = loadImage(unit2/landscape/IMG_5559.jpg);
 }

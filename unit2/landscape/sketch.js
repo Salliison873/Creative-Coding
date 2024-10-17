@@ -1,6 +1,6 @@
 function preload(){
   // load the image from a file
-	img = loadImage();
+	img = loadImage(unit2/landscape/IMG_5559.jpg);
 }
 
 function setup() {

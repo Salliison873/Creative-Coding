@@ -60,8 +60,7 @@ function draw() {
     circle(x,y += 5 ,5); //creates the image
     stroke('#2D6330'); // color of the image 
   }
-}
-
   // render the image
   image(img,10,10,100,100);
 }
+

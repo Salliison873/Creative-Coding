@@ -1,4 +1,5 @@
 function setup() {
+  // Used p5.j.org/reference as a reference. 
   createCanvas(400, 400);
 }
 let x = 320; //where it starts

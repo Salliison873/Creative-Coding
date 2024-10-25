@@ -5,8 +5,13 @@ function setup() {
 }
 function draw(){
   background('white');
-  fill('#03A9F4')
-  rect(0,0,400,400);
+  ellipse(50,50,60,50);
+  ellipse(80,40,60,50);
+  ellipse(130,50,60,50);
+  ellipse(70,70,60,50);
+  ellipse(110,65,60,50);
+  fill('#FFEB3B');
+  ellipse(400,20,150,150);
   let from = color('#795548'); // start here 
   let to = color('rgb(20,204,20)'); // end here
   

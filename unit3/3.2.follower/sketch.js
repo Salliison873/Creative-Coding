@@ -1,3 +1,5 @@
+//used your videos as a reference. 
+
 let debug = true;
 let x =0;
 let y =0;
@@ -11,8 +13,8 @@ let speedy = speedfactor;
 let goalSize = 40;
 
 function setup() {
-  createCanvas(400, 400);
-  x = random(25, width- 25);
+  createCanvas(400, 400); //creates the canvas 
+  x = random(25, width- 25); // keeps the circle inside a set of the parameters.
   y = random(25, height- 25);
   
   
@@ -27,11 +29,11 @@ function setup() {
 
 function draw() {
   background('#2196F3');
-  d = sqrt((x - mouseX) ** 2 + (y - mouseY) ** 2);
+  d = sqrt((x - mouseX) ** 2 + (y - mouseY) ** 2); 
   fill('#FFEB3B')
   rect(goalx,goaly,goalSize,goalSize);
   fill('rgb(14,126,14)')
-  circle(x,y,50);
+  circle(x,y,50); // creates the circle 
   x += speedx;
   y += speedy;
   
@@ -50,7 +52,7 @@ function draw() {
   
   if (d < 25){
     score -= 1;
-    x = random(25, width -25);
+    x = random(25, width -25); //keeps the circle inside of the border.
     y = random(25, height- 25);
   }
   if (
@@ -62,7 +64,7 @@ function draw() {
     x = random(25, width- 25);
     y = random(25, height- 25);
     
-    goalx = random(20, width - 20);
+    goalx = random(20, width - 20); //keeps the square inside of the border. 
     goaly = random(20, height -20);
   }
 }

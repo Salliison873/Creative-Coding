@@ -34,7 +34,7 @@ function draw() {
   // Draw the clock background
   noStroke();
   fill('#ffa9f9');
-  ellipse(0, 0, clockDiameter, clockDiameter);
+  ellipse(0, 0, clockDiameter - 50, clockDiameter - 50);
   img.resize(clockDiameter - 50 ,clockDiameter - 50);
   image(img, clockDiameter, clockDiameter);
 function draw() {

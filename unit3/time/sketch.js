@@ -13,7 +13,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(400, 500);
+  createCanvas(400, 400);
   stroke(255);
   angleMode(DEGREES);
 

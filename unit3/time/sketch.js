@@ -9,7 +9,7 @@ let hoursRadius;
 let clockDiameter;
 
 function preload() {
-  img = loadImage('/assets/laDefense.jpg');
+  img = loadImage('unit3/time/Untitled Project.jpg');
 }
 
 function setup() {
@@ -27,6 +27,7 @@ function setup() {
 
 function draw() {
   background("#FFF7AD");
+   image(img, 0, 0);
 
   // Move origin to center of canvas
   translate(width / 2, height / 2-40);

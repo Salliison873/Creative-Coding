@@ -4,13 +4,9 @@
   ellipse(0, 0, clockDiameter + 25, clockDiameter + 25);
   fill('#ffa9f9');
   ellipse(0, 0, clockDiameter, clockDiameter);
-  function preload(){
-  img1 =loadImage("unit3/time/Flowers.png")
-}
 
 function draw() {
 background(220);
-image(img1,0,0,400,200);
 }
 
   // Calculate angle for each hand

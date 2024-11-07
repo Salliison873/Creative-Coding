@@ -29,7 +29,7 @@ function draw() {
   background("#FFF7AD");
 
   // Move origin to center of canvas
-  translate(width / 2, height / 1-50);
+  translate(width / 2, height / 2-30);
 
   // Draw the clock background
   noStroke();

@@ -9,7 +9,7 @@ let hoursRadius;
 let clockDiameter;
 
 function preload() {
-  img = loadImage('unit3/time/Untitled Project.jpg');
+  img = loadImage('UntitledProject.jpg');
 }
 
 function setup() {

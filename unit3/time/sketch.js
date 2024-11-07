@@ -27,7 +27,7 @@ function setup() {
 
 function draw() {
   background("#FFF7AD");
-   image(img, 0, 0);
+   image(img, 20, 30;
 
   // Move origin to center of canvas
   translate(width / 2, height / 2-40);

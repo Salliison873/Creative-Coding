@@ -37,7 +37,7 @@ function draw() {
   ellipse(0, 0, clockDiameter + 25, clockDiameter + 25);
   fill('#ffa9f9');
   ellipse(0, 0, clockDiameter, clockDiameter);
-  image(img, -100, -200);
+  image(img, -100, -150);
 
 function draw() {
 background(220);

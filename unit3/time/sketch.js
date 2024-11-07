@@ -5,7 +5,7 @@
   fill('#ffa9f9');
   ellipse(0, 0, clockDiameter, clockDiameter);
   function preload(){
-  //img1 =loadImage("/Users/samantha/Desktop")
+  img1 =loadImage("unit3/time/Flowers.png")
 }
 
 function draw() {

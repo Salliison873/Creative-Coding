@@ -27,7 +27,6 @@ function setup() {
 
 function draw() {
   background("#FFF7AD");
-   image(img, 20, 30;
 
   // Move origin to center of canvas
   translate(width / 2, height / 2-40);
@@ -38,6 +37,7 @@ function draw() {
   ellipse(0, 0, clockDiameter + 25, clockDiameter + 25);
   fill('#ffa9f9');
   ellipse(0, 0, clockDiameter, clockDiameter);
+  image(img, 20, 30;
 
 function draw() {
 background(220);

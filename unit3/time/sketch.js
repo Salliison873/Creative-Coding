@@ -38,7 +38,7 @@ function draw() {
   fill('#ffa9f9');
   ellipse(0, 0, clockDiameter, clockDiameter);
   img.resize(clockDiameter,clockDiameter);
-  image(img, -200, -100);
+  image(img, -200, -200);
 
 function draw() {
 background(220);

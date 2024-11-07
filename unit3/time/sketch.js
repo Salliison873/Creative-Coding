@@ -1,6 +1,6 @@
 // Use P5.j reference as a reference 
-
-
+//Art statement:
+// what the clock represent is time is moving that everything coming it a minute. 
 // Declare variables for shape radius
 let secondsRadius;
 let minutesRadius;

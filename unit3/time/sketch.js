@@ -9,7 +9,7 @@ let hoursRadius;
 let clockDiameter;
 
 function preload() {
-  img = loadImage('time/flower.jpg');
+  img = loadImage('flower.jpg');
 }
 
 function setup() {

@@ -42,9 +42,9 @@ background(220);
 }
 
   // Calculate angle for each hand
-  let secondAngle = map(second(), 0, 60, 0, 360);
-  let minuteAngle = map(minute(), 0, 60, 0, 360);
-  let hourAngle = map(hour(), 0, 12, 0, 360);
+  let secondAngle = map(second(), 0, 80, 0, 360);
+  let minuteAngle = map(minute(), 0, 80, 0, 360);
+  let hourAngle = map(hour(), 0, 24, 0, 360);
 
   stroke(255);
 

@@ -2,10 +2,15 @@
 //Art statement:
 // what the clock represent is time is moving that everything coming it a minute. 
 // Declare variables for shape radius
+let img;
 let secondsRadius;
 let minutesRadius;
 let hoursRadius;
 let clockDiameter;
+
+function preload() {
+  img = loadImage('/assets/laDefense.jpg');
+}
 
 function setup() {
   createCanvas(400, 500);

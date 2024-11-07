@@ -26,7 +26,7 @@ function setup() {
 }
 
 function draw() {
-  background('white);
+  background('white');
 
   // Move origin to center of canvas
   translate(width / 2, height / 2);

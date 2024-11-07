@@ -75,9 +75,7 @@ background(220);
   push();
   strokeWeight(10);
   for (let ticks = 0; ticks < 60; ticks += 1) { 
-    point(0, -secondsRadius - 20 );
-    point(0, -secondsRadius);
-    point(0, -secondsRadius /8);
+    point(0, -secondsRadius /10);
     rotate(6);
   }
   pop();

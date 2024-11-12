@@ -1,6 +1,7 @@
 https://nickm.com/memslam/permutation_poems.html
 <style>
-body {
+
+	body {
 	margin: 0;
 	font-family: monospace;
 	font-size: clamp(1rem, 1vw, 1.5rem);
@@ -28,29 +29,6 @@ a {
 	f("webkitfullscreenchange", fullscreenEvt);
 }
 
-function fullscreenEvt(incomingReq)
-{
-	fullscreenListeners(document.removeEventListener);
-	if(incomingReq === true || document.mozFullScreen || 
-		document.fullscreenElement || document.webkitIsFullScreen || 
-		document.msFullscreenElement) {
-			var fsElt;
-				if(window.c instanceof HTMLCanvasElement) fsElt = window.c;
-				else fsElt = document.documentElement;
-				if (fsElt.requestFullscreen) fsElt.requestFullscreen();
-				else if (fsElt.msRequestFullscreen) fsElt.msRequestFullscreen();
-				else if (fsElt.mozRequestFullScreen)
-					fsElt.mozRequestFullScreen();
-				else if (fsElt.webkitRequestFullScreen) 
-					fsElt.webkitRequestFullScreen();
-				nav.style.display = "none";
-				main.style.paddingTop = "0";
-			}
-			else nav.style.display = "block";
-			main.style.paddingTop = "9rem";
-			if (typeof l === "function") setTimeout(l, 200);
-			fullscreenListeners(document.addEventListener);
-		}
 		
 function all_permutations(input) {
 	var result = [];

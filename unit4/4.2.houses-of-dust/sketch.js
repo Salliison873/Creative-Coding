@@ -22,7 +22,7 @@ let grammar = tracery.createGrammar({
 let words = tracery.createGrammar({
 	"phrase": [
 		"on open ground",
-		"by a river"
+		"by a river",
 		"among high mountains",
 		"in a deserted airport",
 		"in dense woods",

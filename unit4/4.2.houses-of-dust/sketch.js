@@ -20,7 +20,7 @@ let gram = tracery.createGrammer({
    "BROKEN DISHES",
    "PLASTIC"],
   "origin": "A HOUSE OF #material#
-})
+});
 quartrain = grammer.flattern("#origin#"); 
 function setup() {
   createCanvas(800, 800);
@@ -31,5 +31,5 @@ function setup() {
 function draw() {
   background(220);
   textSize(48);
-  text("quartrain50,50);
+  text("quartrain50,50");
 }

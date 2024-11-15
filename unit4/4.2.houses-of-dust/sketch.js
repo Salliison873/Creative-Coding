@@ -1,34 +1,33 @@
-let quartrain = '';
-let gram = tracery.createGrammer({
- "material" : 
-  ["DUST", 
-   "BRICK", 
-   "PAPER", 
-   "LEAVES", 
-   "ROOTS", 
-   "DISCARDED CLOTHING", 
-   "WEEDS", 
-   "WOOD",
-   "TIN", 
-   "SAND",
-   "GLASS",
-   "STONE", 
-   "STRAW", 
-   "PLASTIC",
-   "MUD", 
-   "BROKEN DISHES",
-   "PLASTIC"],
-  "origin": "A HOUSE OF #material#
+let quatrain = '';
+
+let grammar = tracery.createGrammar({
+  "material": [
+	"SAND",
+	"DUST",
+	"LEAVES",
+	"PAPER",
+	"TIN",
+	"ROOTS",
+	"BRICK",
+	"BROKEN DISHES",
+	"WOOD",
+	"STRAW",
+	"WEEDS"
+  ],
+  "origin": "A HOUSE OF #material#"
 });
-quartrain = grammer.flattern("#origin#"); 
+
+quatrain = grammar.flatten("#origin#");
+
+
 function setup() {
   createCanvas(800, 800);
-  noloop();
-  
+  noLoop();
 }
 
 function draw() {
   background(220);
-  textSize(48);
-  text("quartrain50,50");
+
+  textSize(40);
+  text(quatrain,50,70);
 }

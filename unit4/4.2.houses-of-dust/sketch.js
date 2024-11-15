@@ -1,4 +1,4 @@
-let quartrain = '':
+let quartrain = '';
 let gram = tracery.createGrammer({
  {
  "material" : 

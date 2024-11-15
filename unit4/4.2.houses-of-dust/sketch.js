@@ -1,7 +1,7 @@
 let quatrain = '';
-var places = '';
-var lights = 'natural light;candles;all available lighting;electricity'.split(';');
-var inhabitants = 'people who eat a great deal;lovers;friends and enemies;collectors of all types;women wearing all colors;all races of men wearing predominantly red clothing;little boys;children and old people;horses and birds;various birds and fishes;american indians;french and german speaking people;people who sleep almost all the time'.split(';');
+let places = '';
+let lights = 'natural light;candles;all available lighting;electricity'.split(';');
+let inhabitants = 'people who eat a great deal;lovers;friends and enemies;collectors of all types;women wearing all colors;all races of men wearing predominantly red clothing;little boys;children and old people;horses and birds;various birds and fishes;american indians;french and german speaking people;people who sleep almost all the time'.split(';');
 
 let grammar = tracery.createGrammar({
   "material": [
@@ -33,12 +33,21 @@ let words = tracery.createGrammar({
 		"in a deserted factory",
 		"underwater",
 		"in southern France",
-		inside a mountain;in an overpopulated area;in japan;in a place with both heavy rain and bright sun;by an abandoned lake;in michigan;by the sea;in a cold, windy climate;among small hills'.split(';');
+		"inside a mountain",
+		"in an overpopulated area",
+		"in japan",
+		"in a place with both heavy rain and bright sun",
+		"by an abandoned lake;in michigan",
+		"by the sea",
+		"in a cold, windy climate",
+		"among small hills"
+		],
 
 
-})
+});
 
 quatrain = grammar.flatten("#origin#");
+places = grammar.flatten("#phrase#");
 
 
 function setup() {
@@ -50,5 +59,6 @@ function draw() {
   background(220);
 
   textSize(40);
-  text(quatrain,50,70);
+  text(quatrain,30,40);
+  text(places,30,40);
 }

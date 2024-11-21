@@ -46,7 +46,9 @@ let words = tracery.createGrammar({
 
 });
 
-quatrain = grammar.flatten("#origin#");
+quatrain = grammar.flatten("#origin#"); /n
+
+
 places = grammar.flatten("#phrase#");
 
 

@@ -37,10 +37,6 @@ function setup() {
       }
       content.child(createElement("p",paragraph));
     }
-    
-  
-    
-  }
   
  window.PagedPolyfill.preview();
 }

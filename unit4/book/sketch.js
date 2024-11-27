@@ -10,7 +10,7 @@ function setup() {
   let content = select("body");
   content.attribute("id","content");
   
-  content.child(createElement("h1","Many " + word + "s"));
+  content.child(createElement("h1", word));
   
   
   // make a sentence

@@ -18,13 +18,13 @@ function setup() {
   while( wc < 50000){
     content.child(createElement("h2",String(word+" ").repeat(random(2,6)).toUpperCase()));
     
-    for (let p = 0; p < random(5,20); p++){
+    for (let p = 0; p < 10; p++){
       let paragraph = '';
-      for (let s = 0; s < random(3,20); s++){
+      for (let s = 0; s < 10; s++){
         let internalPunct = [",",",",",",";"," --"];
         let endPunct = [".",".","?","!"];
         let sentence = word.charAt(0).toUpperCase() + word.slice(1);
-        let sentenceLength = 10;
+        let sentenceLength = 5;
         wc += sentenceLength + 1;
         for (let w = 0; w < sentenceLength; w++){
           sentence += " " + word;

@@ -1,5 +1,4 @@
-function setup() {
-  let word = "quack";
+let word = "Live Laugh Love";
 let wc = 0;
 
 function setup() {

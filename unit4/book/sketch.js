@@ -24,7 +24,7 @@ function setup() {
         let internalPunct = [",",",",",",";"," --"];
         let endPunct = [".",".","?","!"];
         let sentence = word.charAt(0).toUpperCase() + word.slice(1);
-        let sentenceLength = random(9,25);
+        let sentenceLength = 10;
         wc += sentenceLength + 1;
         for (let w = 0; w < sentenceLength; w++){
           sentence += " " + word;

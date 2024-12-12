@@ -1,126 +1,119 @@
 https://nickm.com/memslam/permutation_poems.html
 https://salliison873.github.io/Creative-Coding/unit4/4.1.remix/randomsentences.html
 https://salliison873.github.io/Creative-Coding/unit4/4.1.remix/stochastictexts.html
-
 <style>
-
-body {
-	margin: 0;
-	font-family: monospace;
-	font-size: clamp(1rem, 1vw, 1.5rem);
-	overflow:hidden;
-	color: #ffa9f9
-}
-header {
-	background: #ddd;
-	margin: 0;
-	border-bottom: #eee solid .2rem;
-	width: 100%;
-	height: 6.1rem;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-}
-header > h1 {
-	padding: .3rem .8rem .2rem .8rem;
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', 
-	serif;
-	font-size: .85rem;
-	font-weight: normal;
-	white-space: nowrap;
-}
-a {
-	text-decoration: none;
-	color: #FFF7AD
-}
-#main {
-	padding: 8rem 6vw 3vh 6vw;
-}
-<a href="randomsentences.html">RandomSentence</a>
+  body {
+    margin: 0; /* Removes default margin */
+    font-family: monospace; /* Sets a monospace font */
+    font-size: clamp(1rem, 1vw, 1.5rem); /* Responsive font size based on viewport width */
+    overflow: hidden; /* Prevents scrolling */
+    color: #ffa9f9; /* Sets text color to pink */
+  }
+  header {
+    background: #ddd; /* Light gray background for the header */
+    margin: 0; /* Removes default margin */
+    border-bottom: #eee solid .2rem; /* Adds a solid bottom border */
+    width: 100%; /* Full width header */
+    height: 6.1rem; /* Fixed header height */
+    position: fixed; /* Fixes header at the top */
+    top: 0; /* Aligns header to the top */
+    left: 0; /* Aligns header to the left */
+    z-index: 1000; /* Ensures the header stays on top of other elements */
+  }
+  header > h1 {
+    padding: .3rem .8rem .2rem .8rem; /* Padding around the h1 text */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Serif font */
+    font-size: .85rem; /* Font size */
+    font-weight: normal; /* Normal font weight */
+    white-space: nowrap; /* Prevents text from wrapping */
+  }
+  a {
+    text-decoration: none; /* Removes underline from links */
+    color: #FFF7AD; /* Sets link color to a light yellow */
+  }
+  #main {
+    padding: 8rem 6vw 3vh 6vw; /* Padding around main content to avoid header overlap */
+  }
 </style>
-	<script>
-	const words = ['LOVE', 'LIVE', 'LAUGH', 'LIGHT'];
-	
 
+<body onload="displayPermutations();"> <!-- Calls displayPermutations on page load -->
+  <header id="nav">
+    <h1>
+      <span style="float: right; font-size: 150%">
+        <a onclick="fullscreenEvt(true)">⛶</a> <!-- Fullscreen button -->
+      </span>
+      Permutation Poems (1960s)<br>
+      <a href="https://salliison873.github.io/Creative-Coding/unit4/4.1.remix/randomsentences.html">RandomSentence</a>
+      <p></p>
+      <a href="https://salliison873.github.io/Creative-Coding/unit4/4.1.remix/stochastictexts.html">StochasticTexts</a>
+    </h1>
+  </header>
+  <div id="main"></div> <!-- Main content area -->
 
-	function fullscreenListeners(f)
-{
-	f("mozfullscreenchange", fullscreenEvt);
-	f("MSFullscreenChange", fullscreenEvt);
-	f("fullscreenchange", fullscreenEvt);
-	f("webkitfullscreenchange", fullscreenEvt);
-}
-function fullscreenEvt(incomingReq)
-{
-	fullscreenListeners(document.removeEventListener);
-	if(incomingReq === true || document.mozFullScreen || 
-		document.fullscreenElement || document.webkitIsFullScreen || 
-		document.msFullscreenElement) {
-			var fsElt;
-				if(window.c instanceof HTMLCanvasElement) fsElt = window.c;
-				else fsElt = document.documentElement;
-				if (fsElt.requestFullscreen) fsElt.requestFullscreen();
-				else if (fsElt.msRequestFullscreen) fsElt.msRequestFullscreen();
-				else if (fsElt.mozRequestFullScreen)
-					fsElt.mozRequestFullScreen();
-				else if (fsElt.webkitRequestFullScreen) 
-					fsElt.webkitRequestFullScreen();
-				nav.style.display = "none";
-				main.style.paddingTop = "0";
-			}
-			else nav.style.display = "block";
-			main.style.paddingTop = "9rem";
-			if (typeof l === "function") setTimeout(l, 200);
-			fullscreenListeners(document.addEventListener);
-		}
-		
-function all_permutations(input) {
-	var result = [];
-	function permute(elements, data) {
-	var current, memo = data || [];
-		for (var i = 0; i < elements.length; i++) {
-			current = elements.splice(i, 1)[0];
-				if (elements.length === 0) {
-						result.push(memo.concat([current]));
-					}
-					permute(elements.slice(), memo.concat([current]));
-					elements.splice(i, 0, current);
-				}
-				return result;
-			}
-			return permute(input);
-		}
+  <script>
+    const words = ['LOVE', 'LIVE', 'LAUGH', 'LIGHT']; // Array of words to generate permutations
 
-		function displayPermutations() {
-			var last, text = '', permutations, i, j, main = document.getElementById('main');
-			last = document.createElement('div');
-			permutations = all_permutations(words);
-			for (i in permutations) {
-				for (j in permutations[i]) {
-					text = text + permutations[i][j] + ' ';
-				}
-				text = text + '<br />';
-			}
-			last.innerHTML = text;
-			main.appendChild(last);
-		}
-	</script>
-	<title>Permutation Poems</title>
-</head>
-<body onload="displayPermutations();">
-	<header id=nav>
-		<h1>
-			<span style="float: right; font-size: 150%">
-			<a onclick=fullscreenEvt(true)>⛶</a>
-			</span>
-			Permutation Poems (1960s)<br>
-			<a href="https://salliison873.github.io/Creative-Coding/unit4/4.1.remix/randomsentences.html">RandomSentence</a>
-			<p>
-				</p>
-			<a href = "https://salliison873.github.io/Creative-Coding/unit4/4.1.remix/stochastictexts.html">StochasticTexts</a>
-		</h1>
-	</header>
-	<div id=main></div>
+    // Function to add event listeners for fullscreen changes
+    function fullscreenListeners(f) {
+      f("mozfullscreenchange", fullscreenEvt); // Firefox
+      f("MSFullscreenChange", fullscreenEvt); // Internet Explorer/Edge
+      f("fullscreenchange", fullscreenEvt); // Standard
+      f("webkitfullscreenchange", fullscreenEvt); // Safari/Chrome
+    }
+
+    // Handles fullscreen changes
+    function fullscreenEvt(incomingReq) {
+      fullscreenListeners(document.removeEventListener); // Remove listeners
+      if (incomingReq === true || document.mozFullScreen || document.fullscreenElement || document.webkitIsFullScreen || document.msFullscreenElement) {
+        var fsElt;
+        if (window.c instanceof HTMLCanvasElement) fsElt = window.c; // Check if canvas element
+        else fsElt = document.documentElement; // Default to document root
+        if (fsElt.requestFullscreen) fsElt.requestFullscreen(); // Standard
+        else if (fsElt.msRequestFullscreen) fsElt.msRequestFullscreen(); // IE/Edge
+        else if (fsElt.mozRequestFullScreen) fsElt.mozRequestFullScreen(); // Firefox
+        else if (fsElt.webkitRequestFullScreen) fsElt.webkitRequestFullScreen(); // Safari/Chrome
+        nav.style.display = "none"; // Hide navigation
+        main.style.paddingTop = "0"; // Remove padding
+      } else {
+        nav.style.display = "block"; // Show navigation
+        main.style.paddingTop = "9rem"; // Add padding
+      }
+      if (typeof l === "function") setTimeout(l, 200); // Call function l after delay
+      fullscreenListeners(document.addEventListener); // Add listeners back
+    }
+
+    // Generates all permutations of an input array
+    function all_permutations(input) {
+      var result = []; // Array to store permutations
+      function permute(elements, data) {
+        var current, memo = data || [];
+        for (var i = 0; i < elements.length; i++) {
+          current = elements.splice(i, 1)[0]; // Remove element from array
+          if (elements.length === 0) {
+            result.push(memo.concat([current])); // Add permutation to result
+          }
+          permute(elements.slice(), memo.concat([current])); // Recursive call
+          elements.splice(i, 0, current); // Add element back to array
+        }
+        return result; // Return result array
+      }
+      return permute(input); // Initial call
+    }
+
+    // Displays all permutations of the words array
+    function displayPermutations() {
+      var last, text = '', permutations, i, j, main = document.getElementById('main');
+      last = document.createElement('div'); // Create a new div element
+      permutations = all_permutations(words); // Generate permutations
+      for (i in permutations) {
+        for (j in permutations[i]) {
+          text = text + permutations[i][j] + ' '; // Concatenate words
+        }
+        text = text + '<br />'; // Add line break
+      }
+      last.innerHTML = text; // Set HTML content
+      main.appendChild(last); // Append to main div
+    }
+  </script>
 </body>
-</html>
+

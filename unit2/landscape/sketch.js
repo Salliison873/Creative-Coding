@@ -1,7 +1,3 @@
-
-
-
-
 function setup() {
   createCanvas(400, 400);  // Sets the canvas size to 400x400 pixels
   noStroke();              // Disables drawing the outline (stroke) around shapes

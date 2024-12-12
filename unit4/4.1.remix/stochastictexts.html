@@ -117,22 +117,27 @@ a {
 			}
 		}
 	</script>
-	<title>Lutz’s Stochastic Texts (Reimplementation)</title>
+	<title>Permutation Poems</title>
 </head>
-<body onload=nextText()>
+<body onload="displayPermutations();">
 	<header id=nav>
 		<h1>
-			<span style="float: right; font-size: 150%; clear:both"><a id=pb 
-			onclick="pause=!pause;pb.style.color=pause?'black':'red'">⏸</a>
-			<a id=cl 
-			onclick="caps=!caps;cl.style.color=caps?'black':'red'">⇪</a> 
+			<span style="float: right; font-size: 150%">
 			<a onclick=fullscreenEvt(true)>⛶</a>
 			</span>
-			Stochastic Texts by <a href="https://monoskop.org/Theo_Lutz">Theo 
-			Lutz</a> (1959)<br>
-			
+			Permutation Poems (1960s)<br>
+			based on a work by 
+	<a href="https://en.wikipedia.org/wiki/Brion_Gysin">Brion Gysin</a> &amp; 
+	<a href="https://en.wikipedia.org/wiki/Ian_Sommerville_(technician)">Ian 
+			Sommerville</a><br>
+			code by <a href="https://nickm.com">Nick Montfort,</a> 
+			also in <a href="permutation_poems.py">Python 2/3</a><br>
+			from <a href="https://nickm.com/memslam/">Memory Slam 2.0:</a> 
+			Batch-Era Text Generators<br>
+			edit line 50 of the HTML source for a new poem
 		</h1>
-		</header>
+	</header>
 	<div id=main></div>
 </body>
 </html>
+

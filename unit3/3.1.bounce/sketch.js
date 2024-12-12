@@ -1,10 +1,16 @@
 function setup() {
   createCanvas(400, 400); // Sets up the canvas with dimensions 400x400
+  ballColor = randomColor(); // Sets the initial color of the ball
+  
+  // Initialize the ball's speed in a random direction
+  xspeed = random(-3, 3); // Random speed between -3 and 3 for x direction
+  yspeed = random(-3, 3); // Random speed between -3 and 3 for y direction
 }
+
 let x = 320; // Initial x position of the ball
 let y = 180; // Initial y position of the ball
-let xspeed = 2; // Speed of the ball in the x direction
-let yspeed = 2; // Speed of the ball in the y direction
+let xspeed; // Speed of the ball in the x direction
+let yspeed; // Speed of the ball in the y direction
 let ballColor; // Variable to store the current color of the ball
 
 function draw() {
@@ -31,10 +37,4 @@ function draw() {
 // Function to generate a random color
 function randomColor() {
   return color(random(255), random(255), random(255));
-}
-
-// Set an initial color for the ball
-function setup() {
-  createCanvas(400, 400); // Sets up the canvas with dimensions 400x400
-  ballColor = randomColor(); // Sets the initial color of the ball
 }

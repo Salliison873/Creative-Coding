@@ -39,23 +39,30 @@ based on Nick Montfort and coded by Samantha Allison
   #main {
     padding: 8rem 6vw 3vh 6vw; /* Padding around main content to avoid header overlap */
   }
-</style>
-
-<body onload="displayPermutations();"> <!-- Calls displayPermutations on page load -->
-  <header id="nav">
-    <h1>
-      <span style="float: right; font-size: 150%">
-        <a onclick="fullscreenEvt(true)">⛶</a> <!-- Fullscreen button -->
-      </span>
-      Permutation Poems (1960s)<br>
-      <a href="https://salliison873.github.io/Creative-Coding/unit4/4.1.remix/randomsentences.html">RandomSentence</a>
-      <p></p>
-      <a href="https://salliison873.github.io/Creative-Coding/unit4/4.1.remix/stochastictexts.html">StochasticTexts</a>
-    </h1>
-  </header>
-  <div id="main"></div> <!-- Main content area -->
-
-  <script>
+</script>
+	<title>Permutation Poems</title>
+</head>
+<body onload="displayPermutations();">
+	<header id=nav>
+		<h1>
+			<span style="float: right; font-size: 150%">
+			<a onclick=fullscreenEvt(true)>⛶</a>
+			</span>
+			Permutation Poems (1960s)<br>
+			based on a work by 
+	<a href="https://en.wikipedia.org/wiki/Brion_Gysin">Brion Gysin</a> &amp; 
+	<a href="https://en.wikipedia.org/wiki/Ian_Sommerville_(technician)">Ian 
+			Sommerville</a><br>
+			code by <a href="https://nickm.com">Nick Montfort,</a> 
+			also in <a href="permutation_poems.py">Python 2/3</a><br>
+			from <a href="https://nickm.com/memslam/">Memory Slam 2.0:</a> 
+			Batch-Era Text Generators<br>
+			edit line 50 of the HTML source for a new poem
+		</h1>
+	</header>
+	<div id=main></div>
+</body>
+</html>
     const words = ['LOVE', 'LIVE', 'LAUGH', 'LIGHT']; // Array of words to generate permutations
 
     // Function to add event listeners for fullscreen changes

@@ -3,8 +3,8 @@ function setup() {
   ballColor = randomColor(); // Sets the initial color of the ball
   
   // Initialize the ball's speed in a random direction
-  xspeed = random(-3, 3); // Random speed between -3 and 3 for x direction
-  yspeed = random(-3, 3); // Random speed between -3 and 3 for y direction
+  xspeed = random(-6, 6); // Random speed between -3 and 3 for x direction
+  yspeed = random(-6, 6); // Random speed between -3 and 3 for y direction
 }
 
 let x = 320; // Initial x position of the ball

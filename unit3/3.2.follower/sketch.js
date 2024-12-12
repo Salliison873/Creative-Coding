@@ -12,19 +12,6 @@ let speedy = speedfactor;
 let goalSize = 40;
 let emoji; // Variable to store the emoji image
 
-let debug = true;
-let x = 0;
-let y = 0;
-let d = 0;
-let score = 0;
-let goalx = 0;
-let goaly = 0;
-let speedfactor = 3;
-let speedx = speedfactor;
-let speedy = speedfactor;
-let goalSize = 40;
-let emoji; // Variable to store the emoji image
-
 function preload() {
   emoji = loadImage('https://emojiisland.com/cdn/shop/products/Smiling_Face_Emoji_grande.png?v=1571606036'); // Load the emoji image
 }

@@ -1,10 +1,16 @@
+let emoji; // Variable to store the emoji image
+
+function preload() {
+  emoji = loadImage('emoji.png'); // Load the emoji image
+}
+
 function setup() {
   createCanvas(400, 400); // Sets up the canvas with dimensions 400x400
   ballColor = randomColor(); // Sets the initial color of the ball
   
-  // Initialize the ball's speed in a random direction
-  xspeed = random(-6, 6); // Random speed between -3 and 3 for x direction
-  yspeed = random(-6, 6); // Random speed between -3 and 3 for y direction
+  // Initialize the ball's speed in a random direction with higher values
+  xspeed = random(-6, 6); // Random speed between -6 and 6 for x direction
+  yspeed = random(-6, 6); // Random speed between -6 and 6 for y direction
 }
 
 let x = 320; // Initial x position of the ball
@@ -14,10 +20,13 @@ let yspeed; // Speed of the ball in the y direction
 let ballColor; // Variable to store the current color of the ball
 
 function draw() {
-  background('black'); // Sets the background color to blue
+  background('#00BCD4'); // Sets the background color to blue
   fill(ballColor); // Sets the fill color to the current ball color
   noStroke(); // Disables drawing the outline
-  ellipse(x, y, 60, 60); // Draws the ball
+  
+  // Display the emoji image
+  image(emoji, x - 30, y - 30, 60, 60); // Draw the emoji at the ball's position
+  
   x += xspeed; // Updates the x position
   y += yspeed; // Updates the y position
   

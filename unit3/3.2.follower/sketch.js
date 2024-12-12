@@ -1,4 +1,9 @@
 //used your videos as a reference. 
+let emoji; // Variable to store the emoji image
+
+function preload() {
+  emoji = loadImage('emoji.png'); // Load the emoji image
+}
 
 let debug = true;
 let x =0;

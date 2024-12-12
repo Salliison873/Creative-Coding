@@ -14,10 +14,10 @@ function draw() {
   ellipse(x, y, 60, 60); //makes the circle
   x += xspeed; //moves the ball side to side
   y += yspeed; // moves the ball up and down
-  if (x > width - 100 || x < 100) { //moves the ball
+  if (x > width - 20 || x < 20) { //moves the ball
     xspeed = -xspeed;
   }
-  if (y > height - 100 || y < 100) {
+  if (y > height - 20 || y < 20) {
     yspeed = -yspeed;
   }
 }

@@ -5,7 +5,7 @@ function setup() {
 
 function draw() {
   background('white');    // Sets the background color to white
-
+  
   let from = color('#795548');  // Brown color (start of gradient)
   let to = color('rgb(20,204,20)');  // Green color (end of gradient)
 
@@ -23,7 +23,6 @@ function draw() {
     }
   }
 
-  fill('#FFEB3B');        // Sets the fill color to yellow
-  ellipse(400, 20, 150, 150);  // Draws the sun
+  fill('#FFEB3B');  // Sets the fill color to yellow
+  ellipse(400, 20, 150, 150);  // Draws the sun and ensures it is always visible by drawing it last
 }
-

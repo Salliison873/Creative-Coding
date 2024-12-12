@@ -13,7 +13,7 @@ let goalSize = 40;
 let emoji; // Variable to store the emoji image
 
 function preload() {
-  emoji = loadImage('emoji.png'); // Load the emoji image
+  emoji = loadImage('https://images.app.goo.gl/C81SJnLBmXPCxG2d6); // Load the emoji image
 }
 
 function setup() {

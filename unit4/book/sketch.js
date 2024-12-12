@@ -1,44 +1,41 @@
-let word = "Live Laugh Love";
-let wc = 0;
+let word = "Live Laugh Love"; // The phrase to be repeated
+let wc = 0; // Word count initialized to 0
 
 function setup() {
+  noCanvas(); // No need for a canvas
 
-  // We won't need any canvas
-  noCanvas();
+  let content = select("body"); // Select the body element
+  content.attribute("id", "content"); // Add an ID attribute to the body
 
- 
-  let content = select("body");
-  content.attribute("id","content");
-  
-  content.child(createElement("h1", word));
-  
-  
-  // make a sentence
-  
-  while( wc < 50000){
-    content.child(createElement("h2",String(word+" ").repeat(random(2,6)).toUpperCase()));
-    
-    for (let p = 0; p < 10; p++){
+  content.child(createElement("h1", word)); // Create and append an h1 element with the phrase
+
+  // Generate repeated sentences until the word count reaches 50,000
+  while (wc < 50000) {
+    // Create and append h2 elements with the phrase repeated 2 to 6 times
+    content.child(createElement("h2", String(word + " ").repeat(random(2, 6)).toUpperCase()));
+
+    for (let p = 0; p < 10; p++) { // Create 10 paragraphs
       let paragraph = '';
-      for (let s = 0; s < 10; s++){
-        let internalPunct = [",",",",",",";"," --"];
-        let endPunct = [".",".","?","!"];
-        let sentence = word.charAt(0).toUpperCase() + word.slice(1);
-        let sentenceLength = 5;
-        wc += sentenceLength + 1;
-        for (let w = 0; w < sentenceLength; w++){
+      for (let s = 0; s < 10; s++) { // Each paragraph contains 10 sentences
+        let internalPunct = [",", ",", ",", ";", " --"]; // Internal punctuation options
+        let endPunct = [".", ".", "?", "!"]; // Ending punctuation options
+        let sentence = word.charAt(0).toUpperCase() + word.slice(1); // Capitalize the first letter of the phrase
+        let sentenceLength = 5; // Each sentence is 5 words long
+        wc += sentenceLength + 1; // Increment word count by sentence length plus 1 for punctuation
+
+        // Construct the sentence
+        for (let w = 0; w < sentenceLength; w++) {
           sentence += " " + word;
-          if (random() < 0.2){
-            sentence += random(internalPunct);
+          if (random() < 0.2) {
+            sentence += random(internalPunct); // Add internal punctuation with 20% probability
           }
         }
-        sentence += random(endPunct) + " ";
-        paragraph += sentence;
+        sentence += random(endPunct) + " "; // Add ending punctuation
+        paragraph += sentence; // Add the sentence to the paragraph
       }
-      content.child(createElement("p",paragraph));
+      content.child(createElement("p", paragraph)); // Create and append a paragraph element with the constructed paragraph
     }
-  
- window.PagedPolyfill.preview();
-}
-
+    
+    window.PagedPolyfill.preview(); // Call the PagedPolyfill preview function
+  }
 }

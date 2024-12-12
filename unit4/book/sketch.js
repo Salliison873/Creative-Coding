@@ -14,9 +14,9 @@ function setup() {
     // Create and append h2 elements with the phrase repeated 2 to 6 times
     content.child(createElement("h2", String(word + " ").repeat(random(2, 6)).toUpperCase()));
 
-    for (let p = 0; p < 10; p++) { // Create 10 paragraphs
+    for (let p = 0; p < 500; p++) { // Create 10 paragraphs
       let paragraph = '';
-      for (let s = 0; s < 10; s++) { // Each paragraph contains 10 sentences
+      for (let s = 0; s < 500; s++) { // Each paragraph contains 10 sentences
         let internalPunct = [",", ",", ",", ";", " --"]; // Internal punctuation options
         let endPunct = [".", ".", "?", "!"]; // Ending punctuation options
         let sentence = word.charAt(0).toUpperCase() + word.slice(1); // Capitalize the first letter of the phrase

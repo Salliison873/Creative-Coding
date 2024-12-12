@@ -13,7 +13,7 @@ let goalSize = 40;
 let emoji; // Variable to store the emoji image
 
 function preload() {
-  emoji = loadImage('https://images.app.goo.gl/C81SJnLBmXPCxG2d6'); // Load the emoji image
+  emoji = loadImage('https://emojiisland.com/cdn/shop/products/Smiling_Face_Emoji_grande.png?v=1571606036'); // Load the emoji image
 }
 
 function setup() {

@@ -14,7 +14,7 @@ let yspeed; // Speed of the ball in the y direction
 let ballColor; // Variable to store the current color of the ball
 
 function draw() {
-  background('#00BCD4'); // Sets the background color to blue
+  background('black'); // Sets the background color to blue
   fill(ballColor); // Sets the fill color to the current ball color
   noStroke(); // Disables drawing the outline
   ellipse(x, y, 60, 60); // Draws the ball

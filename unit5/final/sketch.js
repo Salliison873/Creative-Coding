@@ -3,6 +3,7 @@ let pipes = [];
 let score = 0;
 let gameOver = false;
 let birdImg; // Variable to store the bird image
+let lastPipeX = 0; // Track the position of the last created pipe
 
 function preload() {
   birdImg = loadImage('https://emojiisland.com/cdn/shop/products/Smiling_Face_Emoji_grande.png?v=1571606036'); // Load the bird image
@@ -12,10 +13,11 @@ function setup() {
   createCanvas(400, 600); // Set up canvas dimensions
   bird = new Bird(); // Create a new bird instance
   pipes.push(new Pipe()); // Start with one pipe
+  lastPipeX = width; // Initialize last pipe position
 }
 
 function draw() {
-  background('blue'); // Set background color
+  background(0); // Set background color
 
   if (!gameOver) {
     // Update and show each pipe
@@ -42,9 +44,10 @@ function draw() {
     bird.update(); // Update bird position
     bird.show(); // Display bird
 
-    if (frameCount % 75 == 0) {
-      // Add new pipes at intervals
+    // Add new pipes only if there is enough distance from the last pipe
+    if (frameCount % 75 == 0 && width - lastPipeX > 200) {
       pipes.push(new Pipe());
+      lastPipeX = width; // Update last pipe position
     }
 
     // Display the score
@@ -75,6 +78,7 @@ function resetGame() {
   pipes.push(new Pipe()); // Add initial pipe
   score = 0; // Reset score
   gameOver = false; // Reset game over state
+  lastPipeX = width; // Reset last pipe position
 }
 
 class Bird {

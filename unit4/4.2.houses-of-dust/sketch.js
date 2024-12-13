@@ -52,7 +52,7 @@ let words = tracery.createGrammar({
     "in a cold, windy climate",
     "among small hills"
   ],
-   "Phrase": "#Phrase#"
+   "Phrase": "#phrase#"
 });
 
 // Flatten the grammar to generate the quatrain phrase and add a newline

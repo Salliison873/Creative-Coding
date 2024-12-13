@@ -23,6 +23,36 @@ function draw() {
         gameOver = true;
       }
 
+let bird;
+let pipes = [];
+let score = 0;
+let gameOver = false;
+let birdImg; // Variable to store the bird image
+
+function preload() {
+  birdImg = loadImage('https://emojiisland.com/cdn/shop/products/Smiling_Face_Emoji_grande.png?v=1571606036'); // Load the bird image
+}
+
+function setup() {
+  createCanvas(400, 600); // Set up canvas dimensions
+  bird = new Bird(); // Create a new bird instance
+  pipes.push(new Pipe()); // Start with one pipe
+}
+
+function draw() {
+  background(0); // Set background color
+
+  if (!gameOver) {
+    // Update and show each pipe
+    for (let i = pipes.length - 1; i >= 0; i--) {
+      pipes[i].update(); // Update pipe position
+      pipes[i].show(); // Display pipe
+
+      if (pipes[i].hits(bird)) {
+        // Check for collisions
+        gameOver = true;
+      }
+
       if (pipes[i].offscreen()) {
         // Remove pipes that are off the screen
         pipes.splice(i, 1);
@@ -82,8 +112,7 @@ class Bird {
   }
 
   show() {
-    fill(255); // Set bird color
-    ellipse(this.x, this.y, 32, 32); // Draw bird
+    image(birdImg, this.x - 16, this.y - 16, 32, 32); // Draw bird image centered at (this.x, this.y)
   }
 
   up() {

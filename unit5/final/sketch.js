@@ -11,10 +11,10 @@ function draw(){
 background('Black');
 translate(100,100);
 colorMode(HSB, 100);
-for (let x = 0; x < 8; x++){
-   for (let y = 0; y < 8; y++){
+for (let x = 0; x < 5; x++){
+   for (let y = 0; y < 5; y++){
       push();
-      translate(x * 100, y * 100);
+      translate(x * 200, y * 200);
       fill('white');
       rect(0,0,120,120);
       pop();

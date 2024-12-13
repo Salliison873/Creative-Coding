@@ -52,10 +52,14 @@ let words = tracery.createGrammar({
     "in a cold, windy climate",
     "among small hills"
   ],
+   "phrase": "#phrase#"
 });
 
 // Flatten the grammar to generate the quatrain phrase and add a newline
 quatrain = grammar.flatten("#origin#") + '\n';
+
+// Flatten the grammar to generate the places phrase 
+places = grammar.flatten("#phrase#");
 
 // Setup function to initialize the canvas
 function setup() {

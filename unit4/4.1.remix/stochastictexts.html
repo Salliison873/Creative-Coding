@@ -1,48 +1,63 @@
-<style>
-body {
-	margin: 0;
-	font-family: monospace;
-	font-size: clamp(1rem, 1vw, 1.5rem);
-	overflow:hidden;
-	color: #ffa9f9
-}
-header {
-	background: #ddd;
-	margin: 0;
-	border-bottom: #eee solid .2rem;
-	width: 100%;
-	height: 5.2rem;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-}
-header > h1 {
-	padding: .3rem .8rem .2rem .8rem;
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', 
-	serif;
-	font-size: .85rem;
-	font-weight: normal;
-	white-space: nowrap;
-}
-a {
-	text-decoration: none;
-	color: FFF7AD;
-}
-#main {
-	padding: 8rem 6vw 3vh 6vw;
-}
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset=utf-8>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--
+	Stochastic Texts reimplementation
+	copyright (c) 2014, 2023 Nick Montfort <nickm@nickm.com>
+	based on a 1959 program (Stochastische Texte) by Theo Lutz
+	translation of Lutz’s German text by Helen MacCormack
+
+	Copying and distribution of this file, with or without modification,
+	are permitted in any medium without royalty provided the copyright
+	notice and this notice are preserved. This file is offered as-is,
+	without any warranty.
+	-->
+	<style>
+		body {
+			margin: 0;
+			font-family: monospace;
+			font-size: clamp(1rem, 1vw, 1.5rem);
+			overflow:hidden;
+		}
+		header {
+			background: #ddd;
+			margin: 0;
+			border-bottom: #eee solid .2rem;
+			width: 100%;
+			height: 5.2rem;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 1000;
+		}
+		header > h1 {
+			padding: .3rem .8rem .2rem .8rem;
+			font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', 
+				serif;
+			font-size: .85rem;
+			font-weight: normal;
+			white-space: nowrap;
+		}
+		a {
+			text-decoration: none;
+			color: #b00;
+		}
+		#main {
+			padding: 8rem 6vw 3vh 6vw;
+		}
+	</style>
 	<script>
 		var t = 0, caps = false, pause = false;
 
-		const subjects = ['dawn', 'sympathetic', 'energetic', 'illegal', 'sand', 
-			'entertain', 'royal', 'ludicrous', 'snails', 'cold', 'noise', 'possible', 
-			'abnormal', 'house', 'horrible', 'lazy'],
-		predicates = ['random', 'judge', 'cemetery', 'unlock', 'juggle', 'town', 
-			'winter', 'cat', 'soap', 'scare', 'blind', 'clumsy', 'stereotyped', 'dry', 
-			'group', 'futuristic'],
-		conjunctions = [' but ', ' and ', ' an ', '. ', '. ', '. ', 
+		const subjects = ['count', 'stranger', 'look', 'church', 'castle', 
+			'picture', 'eye', 'village', 'tower', 'farmer', 'way', 'guest', 
+			'day', 'house', 'table', 'labourer'],
+		predicates = ['open', 'silent', 'strong', 'good', 'narrow', 'far', 
+			'new', 'old', 'quiet', 'near', 'deep', 'late', 'dark', 'free', 
+			'large', 'angry'],
+		conjunctions = [' and ', ' or ', ' therefore ', '. ', '. ', '. ', 
 			'. ', '. '],
 		quants = ['a', 'every', 'no', 'not every'];
 
@@ -109,27 +124,26 @@ a {
 			}
 		}
 	</script>
-	<title>Permutation Poems</title>
+	<title>Lutz’s Stochastic Texts (Reimplementation)</title>
 </head>
-<body onload="displayPermutations();">
+<body onload=nextText()>
 	<header id=nav>
 		<h1>
-			<span style="float: right; font-size: 150%">
+			<span style="float: right; font-size: 150%; clear:both"><a id=pb 
+			onclick="pause=!pause;pb.style.color=pause?'black':'red'">⏸</a>
+			<a id=cl 
+			onclick="caps=!caps;cl.style.color=caps?'black':'red'">⇪</a> 
 			<a onclick=fullscreenEvt(true)>⛶</a>
 			</span>
-			Permutation Poems (1960s)<br>
-			based on a work by 
-	<a href="https://en.wikipedia.org/wiki/Brion_Gysin">Brion Gysin</a> &amp; 
-	<a href="https://en.wikipedia.org/wiki/Ian_Sommerville_(technician)">Ian 
-			Sommerville</a><br>
-			code by <a href="https://nickm.com">Nick Montfort and Samantha Allison,</a> 
-			also in <a href="permutation_poems.py">Python 2/3</a><br>
-			from <a href="https://nickm.com/memslam/">Memory Slam 2.0:</a> 
-			Batch-Era Text Generators<br>
-			edit line 50 of the HTML source for a new poem
+			Stochastic Texts by <a href="https://monoskop.org/Theo_Lutz">Theo 
+			Lutz</a> (1959)<br>
+			text trans. Helen MacCormack<br>
+			code by <a href="https://nickm.com">Nick Montfort,</a> English 
+			also in <a href="stochastic_texts.py">Python 2/3</a><br>
+			from <a href="https://nickm.com/memslam">Memory Slam 2.0:</a> 
+			Batch-Era Text Generators
 		</h1>
-	</header>
+		</header>
 	<div id=main></div>
 </body>
 </html>
-

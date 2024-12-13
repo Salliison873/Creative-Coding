@@ -57,7 +57,7 @@ function draw() {
     textSize(32);
     text('Game Over', 120, height / 2);
     textSize(16);
-    text('Press R to Restart', 140, height / 2 + 30);
+    text('Click the Mouse to Restart', 140, height / 2 + 30);
   }
 }
 

@@ -15,7 +15,7 @@ function setup() {
 }
 
 function draw() {
-  background('black'); // Set background color
+  background('blue'); // Set background color
 
   if (!gameOver) {
     // Update and show each pipe

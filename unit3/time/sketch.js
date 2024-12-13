@@ -5,7 +5,6 @@
    and to understand that in every ending lies a new beginning. They remind us that life, much like a flower, 
    is a series of blooms and withers, each phase valuable in its own right. */
 
-// Declare variables for shape radius
 let img; // Variable to store the image
 let sec; // Length of the second hand
 let min; // Length of the minute hand

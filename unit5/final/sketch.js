@@ -10,7 +10,7 @@ function setup() {
 }
 
 function draw() {
-  background(0); // Set background color
+  background('blue'); // Set background color
 
   if (!gameOver) {
     // Update and show each pipe

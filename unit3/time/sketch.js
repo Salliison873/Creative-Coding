@@ -5,15 +5,16 @@
    and to understand that in every ending lies a new beginning. They remind us that life, much like a flower, 
    is a series of blooms and withers, each phase valuable in its own right. */
 
+let img; // Variable to store the image
+let sec; // Length of the second hand
+let minuteHand; // Length of the minute hand
+let hours; // Length of the hour hand
+let clockDiameter; // Diameter of the clock face
+
 function preload() {
   // Load the image before the sketch starts
   img = loadImage('https://salliison873.github.io/Creative-Coding/unit3/time/flower.png');
 }
-let img; // Variable to store the image
-let sec; // Length of the second hand
-let min; // Length of the minute hand
-let hours; // Length of the hour hand
-let clockDiameter; // Diameter of the clock face
 
 function setup() {
   createCanvas(500, 500); // Create a canvas of size 500x500 pixels
@@ -23,7 +24,7 @@ function setup() {
   // Set radius for each shape based on canvas dimensions
   let radius = min(width, height) / 2;
   sec = radius * 0.71;
-  min = radius * 0.6;
+  minuteHand = radius * 0.6;
   hours = radius * 0.5;
   clockDiameter = radius * 1.7;
 }
@@ -59,7 +60,7 @@ function draw() {
   push(); // Save the current transformation state
   strokeWeight(2); // Set stroke weight for the minute hand
   rotate(minAngle); // Rotate by the angle of the minute hand
-  line(0, 0, 0, -min); // Draw the minute hand
+  line(0, 0, 0, -minuteHand); // Draw the minute hand
   pop(); // Restore the previous transformation state
 
   // Hour hand

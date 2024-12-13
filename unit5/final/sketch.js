@@ -1,4 +1,4 @@
-llet bird;
+let bird;
 let pipes = [];
 let score = 0;
 let gameOver = false;

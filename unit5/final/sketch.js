@@ -2,15 +2,15 @@ llet bird;
 let pipes = [];
 let score = 0;
 let gameOver = false;
-let birdImg; // Variable to store the bird image
+let birdImg; // Variable to store the emoji image
 
 function preload() {
-  birdImg = loadImage('https://emojiisland.com/cdn/shop/products/Smiling_Face_Emoji_grande.png?v=1571606036'); // Load the bird image
+  birdImg = loadImage('https://emojiisland.com/cdn/shop/products/Smiling_Face_Emoji_grande.png?v=1571606036'); // Load the emoji image
 }
 
 function setup() {
   createCanvas(400, 600); // Set up canvas dimensions
-  bird = new Bird(); // Create a new bird instance
+  bird = new Bird(); // Create a new emoji instance
   pipes.push(new Pipe()); // Start with one pipe
 }
 

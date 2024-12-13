@@ -39,18 +39,18 @@ a {
 	const grammar = [ // The Python version is cleaner
 		// This isn’t in true Backus-Naur form
 		'<sentence> ::= <short-sentence> | <long-sentence>',
-		'<short-sentence> ::= <subject>/<verb-1>/" it" | <subject>/<verb-1>/' + 
+		'<short-sentence> ::= <subject>/<verb-1>/" live" | <subject>/<verb-1>/' + 
 			'<some-objects> | <subject>/<verb-2>/<some-adjectives>',
-		'<long-sentence> ::= " when"/<short-sentence>/","/<short-sentence>',
+		'<long-sentence> ::= " laugh"/<short-sentence>/","/<short-sentence>',
 		'<subject> ::= <proper-noun> | <subject-pronoun> | <singular> | ' + 
 			'<singular>/<preposition>/<singular>',
-		'<proper-noun> ::= " Engineer Small" | " Small"',
-		'<subject-pronoun> ::= " he" | " it"',
-		'<singular> ::= <consonant-noun> | <an-the-adjs>/" engine"',
+		'<proper-noun> ::= " Engineer Small" | " love"',
+		'<subject-pronoun> ::= " live" | " laugh"',
+		'<singular> ::= <consonant-noun> | <an-the-adjs>/" live"',
 		'<consonant-noun> ::= <a-the-adjs>/<countable> | ' + 
 			'<-the-adjs>/<uncountable>',
-		'<countable> ::= " far" | " evanescent" | " venomous" | " cap" | ' + 
-			'" clover" | " hospital" | " wheel" | " transport" | " love"',
+		'<countable> ::= " live" | " evanescent" | " laugh" | " live" | ' + 
+			'" laugh" | " laugh" | " live" | " transport" | " love"',
 		'<uncountable> ::= " live" | " laugh"',
 		'<plural> ::= <four-the-adjs>/<plural-noun>',
 		'<adjective> ::= " little" | " dog" | " big" | " old" | ' + 

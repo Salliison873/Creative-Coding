@@ -59,7 +59,7 @@ let words = tracery.createGrammar({
 quatrain = grammar.flatten("#origin#") + '\n';
 
 // Flatten the grammar to generate the places phrase 
-places = grammar.flatten("#Phrase#");
+places = words.flatten("#Phrase#");
 
 // Setup function to initialize the canvas
 function setup() {

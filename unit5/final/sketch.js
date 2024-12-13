@@ -1,16 +1,17 @@
+//https://emojiisland.com/cdn/shop/products/Smiling_Face_Emoji_grande.png?v=1571606036
 let bird;
 let pipes = [];
 let score = 0;
 let gameOver = false;
-let birdImg; // Variable to store the emoji image
+let birdImg; // Variable to store the bird image
 
 function preload() {
-  birdImg = loadImage('https://emojiisland.com/cdn/shop/products/Smiling_Face_Emoji_grande.png?v=1571606036'); // Load the emoji image
+  birdImg = loadImage('//https://emojiisland.com/cdn/shop/products/Smiling_Face_Emoji_grande.png?v=1571606036'); // Load the bird image
 }
 
 function setup() {
   createCanvas(400, 600); // Set up canvas dimensions
-  bird = new Bird(); // Create a new emoji instance
+  bird = new Bird(); // Create a new bird instance
   pipes.push(new Pipe()); // Start with one pipe
 }
 
@@ -57,7 +58,7 @@ function draw() {
     textSize(32);
     text('Game Over', 120, height / 2);
     textSize(16);
-    text('click the mouse to Restart', 140, height / 2 + 30);
+    text('Press R to Restart', 140, height / 2 + 30);
   }
 }
 

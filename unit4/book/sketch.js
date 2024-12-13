@@ -9,7 +9,7 @@ function setup() {
 
   content.child(createElement("h1", word)); // Create and append an h1 element with the phrase
 
-  // Generate repeated sentences until the word count reaches 50,000
+  // Generate repeated sentences until the word count reaches 100,000
   while (wc < 100000) {
     // Create and append h2 elements with the phrase repeated 2 to 6 times
     content.child(createElement("h2", String(word + " ").repeat(random(2, 6)).toUpperCase()));

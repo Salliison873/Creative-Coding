@@ -5,16 +5,15 @@
    and to understand that in every ending lies a new beginning. They remind us that life, much like a flower, 
    is a series of blooms and withers, each phase valuable in its own right. */
 
+function preload() {
+  // Load the image before the sketch starts
+  img = loadImage('https://salliison873.github.io/Creative-Coding/unit3/time/flower.png');
+}
 let img; // Variable to store the image
 let sec; // Length of the second hand
 let min; // Length of the minute hand
 let hours; // Length of the hour hand
 let clockDiameter; // Diameter of the clock face
-
-function preload() {
-  // Load the image before the sketch starts
-  img = loadImage('https://salliison873.github.io/Creative-Coding/unit3/time/flower.png');
-}
 
 function setup() {
   createCanvas(500, 500); // Create a canvas of size 500x500 pixels

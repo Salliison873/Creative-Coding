@@ -5,7 +5,7 @@ let gameOver = false;
 let birdImg; // Variable to store the bird image
 
 function preload() {
-  birdImg = loadImage('flappy_bird.png'); // Load the bird image
+  birdImg = loadImage('https://emojiisland.com/cdn/shop/products/Smiling_Face_Emoji_grande.png?v=1571606036'); // Load the bird image
 }
 
 function setup() {

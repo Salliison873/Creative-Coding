@@ -1,7 +1,7 @@
 // Use P5.j reference as a reference 
 //Art statement:
 /* Time and flowers, woven together, tell a story of impermanence and beauty.
-   They challenge us to cherish the fleeting moments, to find joy in the transient, 
+   They challenge us to cherish the fleeting moments, to find joy in the beauty, 
    and to understand that in every ending lies a new beginning. They remind us that life, much like a flower, 
    is a series of blooms and withers, each phase valuable in its own right. */
 

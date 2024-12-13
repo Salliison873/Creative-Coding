@@ -45,7 +45,7 @@ function draw() {
     bird.show(); // Display bird
 
     // Add new pipes only if there is enough distance from the last pipe
-    if (frameCount % 75 == 0 && width - lastPipeX > 200) {
+    if (frameCount % 75 == 0 && width - lastPipeX > 50) {
       pipes.push(new Pipe());
       lastPipeX = width; // Update last pipe position
     }

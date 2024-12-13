@@ -57,9 +57,6 @@ let words = tracery.createGrammar({
 // Flatten the grammar to generate the quatrain phrase and add a newline
 quatrain = grammar.flatten("#origin#") + '\n';
 
-// Flatten the grammar to generate the places phrase
-places = grammar.flatten("#phrase#");
-
 // Setup function to initialize the canvas
 function setup() {
   createCanvas(800, 800); // Create a canvas of size 800x800 pixels

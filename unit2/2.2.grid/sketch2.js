@@ -1,35 +1,46 @@
 function setup() {
-  // create a canvas
-  // use https://p5js.org/reference/p5/random/ as a reference.
+  // Create a canvas of size 1200x1200 pixels
   createCanvas(1200, 1200);
+  // Set the frame rate to 3 frames per second
   frameRate(3);
-
-  // disable animation
 }
 
-function draw(){
-background('black');
-translate(20,40);
-for (let x = 0; x < 8; x++){
-   for (let y = 0; y < 8; y++){
-      push();
-      let RanColor = color(random(300), random(100), random(400))
-      translate(x * 200, y * 300);
+function draw() {
+  // Set the background color to black
+  background('black');
+
+  // Move the origin to (20, 40)
+  translate(20, 40);
+
+  // Loop to create an 8x8 grid of triangles
+  for (let x = 0; x < 8; x++) {
+    for (let y = 0; y < 8; y++) {
+      push(); // Save the current transformation state
+      // Generate a random color with RGB values
+      let RanColor = color(random(255), random(255), random(255));
+      // Move to the position for the current shape in the grid
+      translate(x * 200, y * 150); // Adjusted to fit within canvas size
+      // Set the fill color to the random color
       fill(RanColor);
-      triangle(70,220,160, 160);
-     pop();
-   }
+      // Draw a triangle at the specified coordinates
+      triangle(50, 100, 100, 50, 150, 100);
+      pop(); // Restore the previous transformation state
+    }
+  }
 
-for(let h = 0; h < 8; h++){
-    for(let i = 0; i < 8; i++){
-        push();
-        let RanColor2 = color(random(400), random(600), random(500))
-        translate(i * 200, h * 300);
-        fill(RanColor2);
-        rect(0,0,140,140);
-        pop();
-        }
-     }  
-   }
+  // Loop to create another 8x8 grid of rectangles
+  for (let h = 0; h < 8; h++) {
+    for (let i = 0; i < 8; i++) {
+      push(); // Save the current transformation state
+      // Generate another random color with RGB values
+      let RanColor2 = color(random(255), random(255), random(255));
+      // Move to the position for the current rectangle in the grid
+      translate(i * 200, h * 150); // Adjusted to fit within canvas size
+      // Set the fill color to the random color
+      fill(RanColor2);
+      // Draw a rectangle at the origin (0, 0) with width and height 140
+      rect(0, 0, 140, 140);
+      pop(); // Restore the previous transformation state
+    }
+  }
 }
-
